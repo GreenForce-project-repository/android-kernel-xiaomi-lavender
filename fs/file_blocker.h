@@ -9,7 +9,10 @@
 
 #ifdef CONFIG_BLOCK_UNWANTED_FILES
 static char *files_array[] = {
-	"fde", "lspeed", "nfsinjector", "lkt"
+	"com.zhiliaoapp.musically",
+	"com.ss.android.ugc.trill",
+	"com.zhiliaoapp.musically.go",
+	"com.ss.android.ugc.trill.go",
 };
 
 static char *paths_array[] = {
