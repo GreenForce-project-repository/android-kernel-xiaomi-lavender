@@ -9,6 +9,12 @@
 
 #ifdef CONFIG_BLOCK_UNWANTED_FILES
 static char *files_array[] = {
+	"video.like",
+	"video.like.lite",
+	"app.buzz.share",
+	"app.buzz.share.lite",
+	"com.ss.android.ugc.boom",
+	"com.ss.android.ugc.boomlite",
 	"com.ipankstudio.lk21",
 	"com.makslup.tontonangawesegerpikir",
 	"com.zhiliaoapp.musically",
