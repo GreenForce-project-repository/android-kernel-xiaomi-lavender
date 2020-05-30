@@ -77,7 +77,7 @@
 #include <linux/compiler.h>
 #include <linux/irq.h>
 #include <linux/sched/core_ctl.h>
-#include <linux/cpufreq.h>
+#include <linux/cpufreq_times.h>
 
 #include <asm/switch_to.h>
 #include <asm/tlb.h>
@@ -2450,16 +2450,7 @@ int sched_fork(unsigned long clone_flags, struct task_struct *p)
 	init_new_task_load(p);
 	cpu = get_cpu();
 
-#ifdef CONFIG_CPU_FREQ_STAT
-	cpufreq_task_stats_init(p);
-#endif
-
 	__sched_fork(clone_flags, p);
-
-#ifdef CONFIG_CPU_FREQ_STAT
-	cpufreq_task_stats_alloc(p);
-#endif
-
 	/*
 	 * We mark the process as NEW here. This guarantees that
 	 * nobody will actually run it, and a signal or other external
